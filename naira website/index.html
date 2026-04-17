@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5 Months with You ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+html {scroll-behavior:smooth;}
+
+body {
+  margin:0;
+  font-family:'DM Sans',sans-serif;
+  background:#fdfaf6;
+  color:#2a1f1f;
+}
+
+section{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:40px;
+  text-align:center;
+}
+
+h1,h2{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:300;
+}
+
+#landing{background:#fdfaf6}
+#memories{background:#f5ede0}
+#reasons{background:#fdfaf6}
+#quiz{background:#f5ede0}
+#final{background:#2a1f1f;color:white}
+
+img{
+  width:250px;
+  border-radius:12px;
+  margin:10px;
+}
+
+/* BUTTONS */
+button{
+  padding:12px 20px;
+  border:none;
+  border-radius:16px;
+  background:#d4847a;
+  color:white;
+  cursor:pointer;
+  margin:6px;
+  transition:all 0.25s ease;
+}
+
+button:hover{
+  transform:scale(1.05);
+}
+
+/* QUIZ */
+.quiz-question{
+  margin-bottom:30px;
+}
+
+.quiz-question button{
+  display:block;
+  width:100%;
+  max-width:320px;
+  margin:10px auto;
+}
+
+/* FIXED COLOR PRIORITY */
+.correct{
+  background:#4CAF50 !important;
+}
+
+.wrong{
+  background:#e74c3c !important;
+}
+
+/* CONFETTI */
+canvas{
+  position:fixed;
+  top:0;
+  left:0;
+  pointer-events:none;
+}
+
+/* FADE IN */
+.fade{
+  opacity:0;
+  transform:translateY(20px);
+  transition:0.6s;
+}
+.fade.show{
+  opacity:1;
+  transform:translateY(0);
+}
+</style>
+</head>
+
+<body>
+
+<section id="landing" class="fade">
+<div>❤️ since 18th december 2025</div>
+<h1>5 months<br>with you</h1>
+<p>and somehow it just keeps getting better</p>
+</section>
+
+<section id="memories" class="fade">
+<h2>A few moments I keep coming back to</h2>
+
+<h3>Untold, Day 3</h3>
+<p>We met randomly… and somehow ended up exploring the whole festival together. Still not over the fact your phone “died” just so you could stay with me longer.</p>
+<img src="photos/img1.jpg">
+
+<h3>That beach day</h3>
+<p>Neither of us can swim and you were literally clinging onto me the whole time. Lowkey one of the cutest things ever.</p>
+<img src="photos/img2.jpg">
+
+<h3>22nd November</h3>
+<p>The day I told you I liked you… and finding out you felt the same. I don’t think I’ve ever been that happy.</p>
+
+<h3>30th November</h3>
+<p>The first “I love you”… on text… and you absolutely freaking out. I’m still laughing about that.</p>
+
+<h3>The day before your birthday</h3>
+<p>Dinner at Evoo, asking you out, and somehow ending up with you being my girlfriend on 18th December. That worked out pretty well.</p>
+<img src="photos/img3.jpg">
+
+<h3>My birthday night</h3>
+<p>That whole night… the laughs, the vibe, just being with you. Sleeping next to you might actually be my favourite thing.</p>
+<img src="photos/img4.jpg">
+
+<h3>Gal days with you</h3>
+<p>Going to gal with you every day is never boring. Somehow we always find something to laugh about.</p>
+<img src="photos/img5.jpg">
+</section>
+
+<section id="reasons" class="fade">
+<h2>Things I love about you</h2>
+
+<p>How genuine you are with everything.</p>
+<p>You're the sweetest and most caring person I know.</p>
+<p>You’re thoughtful about even the smallest things.</p>
+<p>You make me smile without even trying.</p>
+<p>You somehow look good even after waking up.</p>
+<p>We laugh in literally any situation.</p>
+<p>Everything feels comfortable with you.</p>
+<p>My kuchi pie ❤️</p>
+<p>“my sneaker eating saaliii”</p>
+<p>You’re mine. Forever.</p>
+</section>
+
+<section id="quiz" class="fade">
+<h2>How well do you know us?</h2>
+
+<div class="quiz-question">
+<p>What was the first thing I thought when I saw you?</p>
+<button data-correct="false">Kutti</button>
+<button data-correct="true">Wow… pretty girl I like</button>
+<button data-correct="false">Interesting look monkey types</button>
+<button data-correct="false">desi girl</button>
+</div>
+
+<div class="quiz-question">
+<p>What’s the most “us” thing we do?</p>
+<button data-correct="false">Laugh in any fucking situation</button>
+<button data-correct="false">fight🤗</button>
+<button data-correct="false">peeto each other</button>
+<button data-correct="true">All of the above</button>
+</div>
+
+<div class="quiz-question">
+<p>who loves who more?</p>
+<button data-correct="true">Ruhaan</button>
+<button data-correct="true">ruhi puhi</button>
+<button data-correct="false">Naira</button>
+<button data-correct="true">UR LOML</button>
+</div>
+
+<div class="quiz-question">
+<p>What are you to me?</p>
+<button data-correct="false">Naira sawhney</button>
+<button data-correct="true">My kuchi pie ❤️</button>
+<button data-correct="false">Random girl i have done things with</button>
+<button data-correct="false">Nobody</button>
+</div>
+
+<p id="result" style="margin-top:20px;font-weight:bold;"></p>
+</section>
+
+<section id="final" class="fade">
+<h2>Naira ❤️</h2>
+
+<p>
+Babi badi mehnat kari hai now i know how u felt when u made ur website i love u the most my my kuchu pie ur my entire world i cant beleive i get to spend my entire life with u these 5 months have made me understand that ur my only person for life its you or nothing my loml my kuchi pie my everything the love of my life the mother of my children my wifeee ❤️
+</p>
+
+<button onclick="playMusic()">Play something</button>
+</section>
+
+<audio id="music" loop>
+<source src="kulosa.mp3" type="audio/mpeg">
+</audio>
+
+<canvas id="confetti"></canvas>
+
+<script>
+let answered = new Set();
+let confettiStarted = false;
+
+document.querySelectorAll(".quiz-question").forEach((q, index)=>{
+  let buttons = q.querySelectorAll("button");
+
+  buttons.forEach(btn=>{
+    btn.addEventListener("click", function(){
+
+      // reset colors
+      buttons.forEach(b=>b.classList.remove("correct","wrong"));
+
+      if(btn.dataset.correct==="true"){
+        btn.classList.add("correct");
+      } else {
+        btn.classList.add("wrong");
+      }
+
+      answered.add(index);
+
+      if(answered.size === 4 && !confettiStarted){
+        confettiStarted = true;
+        document.getElementById("result").innerText="You still win me ❤️";
+        startConfetti();
+      }
+    });
+  });
+});
+
+/* MUSIC FADE */
+function playMusic(){
+  let audio = document.getElementById("music");
+  audio.volume = 0;
+  audio.play();
+
+  let fade = setInterval(()=>{
+    if(audio.volume < 1){
+      audio.volume += 0.05;
+    } else {
+      clearInterval(fade);
+    }
+  },200);
+}
+
+/* CONFETTI */
+const canvas = document.getElementById("confetti");
+const ctx = canvas.getContext("2d");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let pieces = [];
+
+function startConfetti(){
+  for(let i=0;i<150;i++){
+    pieces.push({
+      x:Math.random()*canvas.width,
+      y:Math.random()*canvas.height,
+      r:Math.random()*6+2
+    });
+  }
+  draw();
+}
+
+function draw(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  pieces.forEach(p=>{
+    ctx.beginPath();
+    ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    ctx.fillStyle=`hsl(${Math.random()*360},100%,50%)`;
+    ctx.fill();
+    p.y+=2;
+  });
+  requestAnimationFrame(draw);
+}
+
+/* FADE IN ON SCROLL */
+const fades = document.querySelectorAll(".fade");
+const obs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting) e.target.classList.add("show");
+  });
+});
+fades.forEach(f=>obs.observe(f));
+</script>
+
+</body>
+</html>
